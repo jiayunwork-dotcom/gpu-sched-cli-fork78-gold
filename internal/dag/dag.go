@@ -248,7 +248,7 @@ func DetectCycle(g *DependencyGraph) ([]string, bool) {
 		if found {
 			return
 		}
-		color[node] = black
+		color[node] = gray
 		edges := g.edges[node]
 		for _, e := range edges {
 			dep := e.To
